@@ -20,6 +20,12 @@ The system has four main operations which are the add operation, in which a node
 
 ## Proof-of-Storage Algorithm
 
+The proof-of-storage algorithm is used to ensure that a certain node is actualy storing a certain file. Below I will explain the algorithm.
+
+First, for each file f it has stored in the system, the Verifier V generates a random array of integers corresponding to byte positions on the data of the file. Afterward, V generates a random string of size 5 or more. Once these two things are done, V creates a challenge object c containing the integer array and the random string and sends it to the node(s) that is(are) storing f it also initiates a counter. Once the Prover P receives the challenge c that proves P is storing f it will attempt to solve it by getting the bytes corresponding to the positions given by the list of integers, concatenate the result with the random string in the challenge. Afterward, P executes a hash function on the resulting string. This hash is then sent to V. Once V receives the hash it will verify if it was sent in the available time-frame, if yes, and if the response is correct than V has a proof that P is storing file f properly. If the response was not sent in the available time-frame the node down counter is incremented by 1. If this counter reaches 5 the node is considered faulty. If the response is not correct than V will handle this node as being faulty. If a node is considered faulty the system handles this case by marking locally (in a local file) the node as faulty. Afterward, the V removes the files that are storing that belong to P. Once this is done V will need to update the DHT. It does so by adding the files again into the system while ignoring the faulty nodes. This way the files will be replicated among the number of nodes that they configured.
+It is important to mention the fact that the random string is used to prevent a node to intercept the response of another node and send it as his own.
 
 
-## 
+## Evaluation
+
+Consediring the previously described system and its operations we will need to test it.
