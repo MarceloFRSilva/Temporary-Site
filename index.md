@@ -31,3 +31,8 @@ It is important to mention the fact that the random string is used to prevent a 
 Considering the previously described system and its operations we will need to test it.
 
 One important test would be to see if all the operations work properly in a real scenario and collect the latency, network bandwidth, and memory usage. Another important thing to test would be the Proof-of-Storage algorithm in a real scenario and see if it can resist to a set of attacks. Finally, I think it is important to test the difference between the clouds and the P2P in performance.
+
+
+### Author:
+
+Marcelo Silva
