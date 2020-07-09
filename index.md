@@ -3,4 +3,7 @@
 
 ## Secure Storage for the Blockchain
 
-Blockchain is currently revolutionizing the world. It consists of a distributed ledger of transactions. It can be used for several purposes for example for payment processing, money transfers, digital voting, immutable data backup, data storing, among others. It is interesting to use blockchain to store data because it is an immutable ledger that will ensure desirable security properties. However, in blockchain technology, it remains a problem the fact that it can only store, in an efficient way, data with small sizes because blockchain is replicated across all nodes which in case of some blockchains are thousands of them. To tackle this problem we propose a new secure data storage for blockchains, in particular for education certificates. The usage of blockchain to store education certificates allows a better authenticity assessment of these certificates. This document proposes a solution in which we use clouds and peer-to-peer systems. With our solution we can have a storage system that works on top of a blockchain, any blockchain, that can store files of arbitrary size allowing the clients to have all the blockchain interesting properties and still being able to store large files. Being a decentralized solution with cloud storage providers for storage we attempt to bring together the best of each architecture, P2P and centralized, by having high availability and security, namely integrity and freshness.
+In my master thesis I am developing a Secure Storage system for the Ethereum blockchain. This storage system is both P2P and cloud based.
+We combined this two architectures in order to take advantageous of the best of each one. 
+
+The P2P compo
